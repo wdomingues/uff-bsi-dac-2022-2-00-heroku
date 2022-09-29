@@ -16,9 +16,14 @@ import java.io.Serializable;
  */
 public class MessageBean implements Serializable {
      
+    private String aut;
     private String msg;
         
     public MessageBean() {
+    }
+    
+    public String getAut() {
+        return "José Viterbo";
     }
     
     public String getMsg() {
