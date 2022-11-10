@@ -24,7 +24,7 @@
     </header>
     <body>
         <h4 style="text-align: center;"><jsp:getProperty name="myBean" property="weekDayMsg"/> <jsp:getProperty name="myBean" property="weekDay"/>.</h4>
-        <h2><jsp:getProperty name="myBean" property="msg"/>, <%=request.getParameter("nome")%>!</h2>
+        <h2 style="text-align: center;"><jsp:getProperty name="myBean" property="msg"/>, <%=request.getParameter("nome")%>!</h2>
     </body>
     <footer>
         <h4 style="text-align: center;">
