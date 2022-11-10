@@ -59,7 +59,7 @@ public class MessageBean implements Serializable {
         return getGreeting(this.lang, periodOfDay);
     }
     public String getMsg2() {
-        switch (this.lang){
+        switch (this.lang) {
             case "pt":
                 return "Elaborado por";
             case "en":
@@ -73,7 +73,7 @@ public class MessageBean implements Serializable {
     }
 
     public String getWeekDayMsg() {
-        switch (this.lang){
+        switch (this.lang) {
             case "pt":
                 return "Hoje é";
             case "en":
@@ -86,7 +86,7 @@ public class MessageBean implements Serializable {
         return "";
     }
     public String getFooterMsg() {
-        switch (this.lang){
+        switch (this.lang) {
             case "pt":
                 return "derivado de " + getOriginalRepo() + " - estendedido por " + getAutEMail() + ".";
             case "en":
