@@ -92,7 +92,7 @@ public class MessageBean implements Serializable {
             case "en":
                 return "forked from " + getOriginalRepo() + " - extended by " + getAutEMail() + ".";
             case "de":
-                return "aus " + getOriginalRepo() + "gegabelt - erweitert von " + getAutEMail() + ".";
+                return "aus " + getOriginalRepo() + " gegabelt - erweitert von " + getAutEMail() + ".";
             case "fr":
                 return "dérivé de " + getOriginalRepo() + " - étendu par " + getAutEMail() + ".";
         }
