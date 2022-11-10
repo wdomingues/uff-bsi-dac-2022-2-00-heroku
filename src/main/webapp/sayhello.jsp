@@ -14,10 +14,10 @@
     </head>
     <header>
         <h1>Aplicativo HelloWorld</h1>
+        <jsp:useBean id="myBean" class="hello.MessageBean"/>
         <h6><jsp:getProperty name="myBean" property="msg2"/> <jsp:getProperty name="myBean" property="aut"/></h6>
     </header>
     <body>
-        <jsp:useBean id="myBean" class="hello.MessageBean"/>
         <% String lang = request.getParameter("lang"); %>
         <h4><jsp:getProperty name="myBean" property="weekDayMsg"/> <jsp:getProperty name="myBean" property="weekDay"/>.</h4>
         <jsp:setProperty name="myBean" property="lang" value="<%=lang%>"/>
