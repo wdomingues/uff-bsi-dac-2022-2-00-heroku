@@ -13,7 +13,7 @@
         <title>SayHello.jsp</title>
     </head>
     <header>
-        <h1>
+        <h1 text-align="center">
             _______________________Aplicativo Hello World!_______________________
         </h1>
         <jsp:useBean id="myBean" class="hello.MessageBean"/>
@@ -27,8 +27,10 @@
         <h2><jsp:getProperty name="myBean" property="msg"/>, <%=request.getParameter("nome")%>!</h2>
     </body>
     <footer>
-        <br><br><br><br><br><br><br><br><br><br>
-        _______________________<jsp:getProperty name="myBean" property="footerMsg"/>_______________________
-        <br><br>
+        <h4 text-align="center">
+            <br><br><br><br><br><br><br><br><br><br>
+            _______________________<jsp:getProperty name="myBean" property="footerMsg"/>_______________________
+            <br><br>
+        </h4>
     </footer>
 </html>
