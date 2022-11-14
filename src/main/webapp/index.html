@@ -38,9 +38,9 @@ and open the template in the editor.
         </h4>
     </footer>
     <script>
-        document.getElement('[name=local-timezone]').value = getLocalTimeZone();
         function getLocalTimeZone(){
             return Intl.DateTimeFormat().resolvedOptions().timeZone;
         }
+        document.getElement('[name=local-timezone]').value = getLocalTimeZone();
     </script>
 </html>
