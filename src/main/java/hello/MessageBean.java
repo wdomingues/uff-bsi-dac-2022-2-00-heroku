@@ -48,7 +48,6 @@ public class MessageBean implements Serializable {
         return lang;
     }
     public String getLocalTZ() {
-        System.out.println(localTZ);
         return localTZ;
     }
 
