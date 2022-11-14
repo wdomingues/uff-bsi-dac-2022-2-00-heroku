@@ -55,6 +55,7 @@ public class MessageBean implements Serializable {
     public Calendar getTime() {
         String ltz = getLocalTZ();
         TimeZone tz = TimeZone.getTimeZone(ltz);
+        TimeZone.setDefault(tz);
         Calendar calInstance = getCalInstance();
         calInstance.setTimeZone(tz);
         return calInstance;
