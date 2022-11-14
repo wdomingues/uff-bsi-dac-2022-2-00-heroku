@@ -48,6 +48,7 @@ public class MessageBean implements Serializable {
         return lang;
     }
     public String getLocalTZ() {
+        System.out.println(localTZ);
         return localTZ;
     }
 
@@ -107,7 +108,7 @@ public class MessageBean implements Serializable {
     public String getFooterMsg() {
         switch (this.lang) {
             case "pt":
-                return "derivado de " + getOriginalRepo() + " - estendedido por " + getAutEMail() + ".";
+                return "derivado de " + getOriginalRepo() + " - estendido por " + getAutEMail() + ".";
             case "en":
                 return "forked from " + getOriginalRepo() + " - extended by " + getAutEMail() + ".";
             case "de":
