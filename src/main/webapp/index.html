@@ -20,12 +20,12 @@ and open the template in the editor.
         <div style="text-align: center;">
             <h1>Preencha o formulário:</h1>
             <form action="sayhello.jsp" method="post">
-                <input type="hidden" name="local-timezone" >
                 <br>Idioma preferido: <input type="radio" name="lang" value="pt" checked> Português
                 <input type="radio" name="lang" value="en"> Inglês
                 <input type="radio" name="lang" value="fr"> Francês
                 <input type="radio" name="lang" value="de"> Alemão<br><br>
                 Nome: <input type="text" name="nome"/><br><br>
+                <input type="hidden" name="ltz" id="localtz">
                 <input type="submit" value="Cumprimentar"/>
             </form>
         </div>
@@ -37,10 +37,10 @@ and open the template in the editor.
             <br><br>
         </h4>
     </footer>
-    <script>
-        function getLocalTimeZone(){
+    <script type='text/javascript'>
+        function getLocalTimeZone() {
             return Intl.DateTimeFormat().resolvedOptions().timeZone;
         }
-        document.getElement('[name=local-timezone]').value = getLocalTimeZone();
+        document.getElementById('localtz').value = getLocalTimeZone();
     </script>
 </html>
