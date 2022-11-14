@@ -19,6 +19,8 @@
         <jsp:useBean id="myBean" class="hello.MessageBean"/>
         <% String lang = request.getParameter("lang"); %>
         <jsp:setProperty name="myBean" property="lang" value="<%=lang%>"/>
+        <% String localTimeZone = request.getParameter("local-timezone"); %>
+        <jsp:setProperty name="myBean" property="localTZ" value="<%=localTimeZone%>"/>
         <h5 style="text-align: center;"><jsp:getProperty name="myBean" property="msg2"/> <jsp:getProperty name="myBean" property="aut"/></h5>
             <br><br><br>
     </header>
@@ -32,7 +34,7 @@
             <br><br><br><br><br><br><br><br><br><br>
             _______________________<jsp:getProperty name="myBean" property="footerMsg"/>_______________________
             <br>
-            <h4 style="text-align: center;"><jsp:getProperty name="myBean" property="timeMsg"/>
+            <h4 style="text-align: center;"><jsp:getProperty name="myBean" property="timeMsg"/></h4>
             <br>
         </h4>
     </footer>

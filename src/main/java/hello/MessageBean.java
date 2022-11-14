@@ -7,9 +7,9 @@ package hello;
  */
 
 
-import java.beans.*;
 import java.io.Serializable;
 import java.util.Calendar;
+import java.util.TimeZone;
 
 import static hello.TimeManipulation.*;
 
@@ -23,6 +23,8 @@ public class MessageBean implements Serializable {
     private String autEMail;
     private String originalRepo;
     private String lang;
+    private String time;
+    private String localTZ;
     private String weekDay;
     private String msg;
     private String msg2;
@@ -45,6 +47,19 @@ public class MessageBean implements Serializable {
     public String getLang() {
         return lang;
     }
+    public String getLocalTZ() {
+        return localTZ;
+    }
+
+    public Calendar getTime() {
+        String ltz = getLocalTZ();
+        System.out.println(ltz);
+        TimeZone tz = TimeZone.getTimeZone(ltz);
+        Calendar calInstance = getCalInstance();
+        calInstance.setTimeZone(tz);
+        return calInstance;
+    }
+
     public String getWeekDay() {
         Calendar time = getTime();
         return TimeManipulation.getWeekDay(time, getLang());
@@ -52,6 +67,10 @@ public class MessageBean implements Serializable {
 
     public void setLang(String value) {
         lang = value;
+    }
+
+    public void setLocalTZ(String localTZ) {
+        this.localTZ = localTZ;
     }
 
     public String getMsg() {
@@ -100,7 +119,6 @@ public class MessageBean implements Serializable {
         return "";
     }
     public String getTimeMsg() {
-
         return getTime().getTime().toString();
     }
 }

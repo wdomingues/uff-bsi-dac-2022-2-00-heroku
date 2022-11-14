@@ -11,7 +11,7 @@ public class TimeManipulation {
     public static final char PM = 'A';
     public static final char EVE = 'E';
 
-    protected static Calendar getTime(){
+    protected static Calendar getCalInstance(){
         return Calendar.getInstance();
     }
 
