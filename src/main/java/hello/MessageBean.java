@@ -28,6 +28,7 @@ public class MessageBean implements Serializable {
     private String msg2;
     private String weekDayMsg;
     private String footerMsg;
+    private String timeMsg;
 
     public MessageBean() {
     }
@@ -97,6 +98,10 @@ public class MessageBean implements Serializable {
                 return "dérivé de " + getOriginalRepo() + " - étendu par " + getAutEMail() + ".";
         }
         return "";
+    }
+    public String getTimeMsg() {
+
+        return getTime().getTime().toString();
     }
 }
 

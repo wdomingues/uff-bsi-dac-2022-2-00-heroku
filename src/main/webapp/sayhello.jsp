@@ -31,7 +31,9 @@
         <h4 style="text-align: center;">
             <br><br><br><br><br><br><br><br><br><br>
             _______________________<jsp:getProperty name="myBean" property="footerMsg"/>_______________________
-            <br><br>
+            <br>
+            <h4 style="text-align: center;"><jsp:getProperty name="myBean" property="timeMsg"/>
+            <br>
         </h4>
     </footer>
 </html>
